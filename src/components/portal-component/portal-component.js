@@ -67,7 +67,7 @@ function PortalCard(props) {
         console.log(props.authToken)
         return (
             <div>
-                <form method="post" action={props.data.link} class="inline">
+                <form method="post" action={process.env.REACT_APP_SURVEY_BUILDER_URL + "login"} class="inline">
                     <input type="hidden" name="token" value={props.authToken} />
                     {/* <input type="hidden" name="X-XSRF-TOKEN" value={"eyJpdiI6IndJR29DYUNDbjQ5eG1taWJUVjJ1NVE9PSIsInZhbHVlIjoiVisvTVNCc2puS1ZsZWlhYnZBbHpMd01odksyWm9laG9UdE45N3dHcWp5c3hNRWNuK3FCbVRPa0xTcEZoNXhPSWxtbUFZUFdxbTY3a0RrVU5UWUQwOG0wTGRQL1lINC9kT3NndkVGeWtPVTFtTlc5clBnYWN4NmF0MGxxTGhtcUciLCJtYWMiOiIxZTUyMjJhZDFhZjNiNzMwZTZlZTQxZTM4NTJhNzk2OTY5OGM3ODUwZDU1NzliNTUwYjRiNTVlYmM3ZjJkNzc4IiwidGFnIjoiIn0%3D"} /> */}
                     <input type="hidden" name="redirect_url" value="/admin/xlsform/create" />
